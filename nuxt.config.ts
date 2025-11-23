@@ -10,6 +10,8 @@ export default defineNuxtConfig({
     'motion-v/nuxt'
   ],
 
+  ssr: false,
+
   devtools: {
     enabled: true
   },
@@ -19,6 +21,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
 
   nitro: {
+    preset: 'static',
     prerender: {
       routes: [
         '/'
