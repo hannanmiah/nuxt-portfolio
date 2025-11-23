@@ -1,0 +1,6 @@
+title: YourHouseTV
+description: Streaming platform. Built with Laravel, Reverb (websocket), and Inertia.js (Vue).
+image: https://placehold.co/600x400?text=YourHouseTV
+url: "#"
+tags: ["Laravel", "Reverb", "Inertia.js"]
+date: "2024"

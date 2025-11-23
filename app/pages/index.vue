@@ -26,8 +26,14 @@ useSeoMeta({
         container: '!pt-0 lg:grid lg:grid-cols-2 lg:gap-8'
       }"
     >
-      <LandingAbout :page />
-      <LandingWorkExperience :page />
+      <div class="flex flex-col gap-y-8">
+        <LandingAbout :page />
+        <LandingSkills :page />
+      </div>
+      <div class="flex flex-col gap-y-8">
+        <LandingWorkExperience :page />
+        <LandingEducation :page />
+      </div>
     </UPageSection>
     <LandingBlog :page />
     <LandingTestimonials :page />

@@ -1,0 +1,6 @@
+title: The Lead Library
+description: CRM for student consultancy. Built using Laravel, Vue.js, Tailwind CSS, MySQL, and Laravel WebSocket.
+image: https://placehold.co/600x400?text=Lead+Library
+url: "#"
+tags: ["Laravel", "Vue.js", "Tailwind CSS", "WebSocket"]
+date: "2023"

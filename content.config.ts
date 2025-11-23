@@ -45,17 +45,45 @@ export default defineContentConfig({
           images: z.array(createImageSchema())
         }),
         about: createBaseSchema(),
+        skills: z.array(z.string()),
         experience: createBaseSchema().extend({
           items: z.array(z.object({
-            date: z.date(),
+            date: z.string(),
             position: z.string(),
             company: z.object({
               name: z.string(),
-              url: z.string(),
-              logo: z.string().editor({ input: 'icon' }),
-              color: z.string()
+              url: z.string().optional(),
+              logo: z.string().editor({ input: 'icon' }).optional(),
+              color: z.string().optional()
             })
           }))
+        }),
+        education: createBaseSchema().extend({
+          items: z.array(z.object({
+            date: z.string(),
+            degree: z.string(),
+            institution: z.object({
+              name: z.string(),
+              url: z.string().optional(),
+              logo: z.string().editor({ input: 'icon' }).optional()
+            })
+          }))
+        }),
+        certificates: createBaseSchema().extend({
+           items: z.array(z.object({
+            date: z.string(),
+            name: z.string(),
+            issuer: z.string(),
+            url: z.string().optional()
+           }))
+        }),
+        awards: createBaseSchema().extend({
+           items: z.array(z.object({
+            date: z.string(),
+            title: z.string(),
+            issuer: z.string(),
+            description: z.string().optional()
+           }))
         }),
         testimonials: z.array(createTestimonialSchema()),
         blog: createBaseSchema(),
